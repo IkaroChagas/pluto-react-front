@@ -1,11 +1,18 @@
 import React from 'react';
-import * as C from './styled'
+import { HeaderContainer, TextContainer, ContainerFood, FoodImage } from './styled'
+import textImg from '../../../assets/text.png';
+import foodImg from '../../../assets/feeding.png';
 
-function Header() {
+const Header: React.FC = () => {
     return (
-        <C.Header>
-            <h1>Meu Header</h1>
-        </C.Header>
+        <HeaderContainer>
+            <TextContainer>
+                <img src={textImg} />
+            </TextContainer>
+            <ContainerFood>
+                <FoodImage src={foodImg} />
+            </ContainerFood>
+        </HeaderContainer>
     );
 }
 
