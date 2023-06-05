@@ -195,15 +195,18 @@ export const AndressImage = styled.img`
 
 export const MapContainer = styled.div`
    display: flex;
+   margin: auto;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  width: 1280px;
+  height: 342px; 
+  padding-top: 100px;
+  padding-bottom: 200px;
 `;
 
 export const MapImage = styled.img`
-  padding-top: 100px;
-  padding-bottom: 200px;
+  
   margin: auto;
   width: 1500px;
   height: 400px;
