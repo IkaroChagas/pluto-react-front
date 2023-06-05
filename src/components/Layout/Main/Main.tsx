@@ -6,7 +6,6 @@ import Ellipsered from '../../../assets/ellipsered.png';
 import Card1 from '../../../assets/Card1.png';
 import Card2 from '../../../assets/Card2.png';
 import Andress from '../../../assets/andresscard.png';
-import MapImage from '../../../assets/map.png';
 import Maps from "../../MapContainer/Maps";
 
 
