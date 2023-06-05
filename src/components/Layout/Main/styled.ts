@@ -204,11 +204,3 @@ export const MapContainer = styled.div`
   padding-top: 100px;
   padding-bottom: 200px;
 `;
-
-export const MapImage = styled.img`
-  
-  margin: auto;
-  width: 1500px;
-  height: 400px;
-  left: 320px;
-`;

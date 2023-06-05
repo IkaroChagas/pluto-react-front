@@ -6,7 +6,7 @@ const Maps: React.FC = () => {
     return (
         <iframe
             src="https://snazzymaps.com/embed/497177"
-            width="100%"
+            width="1500px"
             height="600px"
             style={{ border: 'none' }}
         ></iframe>
