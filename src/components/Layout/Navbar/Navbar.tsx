@@ -6,6 +6,7 @@ import Button from '../../../assets/button.png';
 
 const Navbar: React.FC = () => {
 
+
     return (
         <NavbarContainer>
 
@@ -19,7 +20,7 @@ const Navbar: React.FC = () => {
                     <NavLink to="/unidades">Nossas Unidades</NavLink>
                 </NavItem>
                 <NavItem>
-                    <ButtonLink to="/doe"><img src={Button} /></ButtonLink>
+                    <ButtonLink to="/login"><img src={Button} /></ButtonLink>
                 </NavItem>
             </Nav >
         </NavbarContainer >
