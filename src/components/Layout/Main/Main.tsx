@@ -66,7 +66,6 @@ const Main: React.FC = () => {
                 <Maps />
             </C.MapContainer>
 
-
         </C.MainContainer>
     )
 };

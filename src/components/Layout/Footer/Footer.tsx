@@ -1,13 +1,20 @@
 import React from 'react';
 import * as C from './styled';
+import FooterLogo from '../../../assets/footerlogo.png'
+import ScrollToTop from '../../FooterButton/FooterButton'
 
-function Footer() {
+const Footer: React.FC = () => {
+
+
     return (
-        <div>
-            <C.P>
-                Este é um parágrafo estilizado usando o Styled Components!
-            </C.P>
-        </div>
+        <C.FooterContainer>
+            <C.FooterLogo src={FooterLogo} />
+            <C.TextFooter>
+                Voltar ao topo
+            </C.TextFooter>
+            <ScrollToTop />
+        </C.FooterContainer>
+
     );
 }
 
