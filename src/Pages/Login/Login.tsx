@@ -1,30 +1,26 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import * as C from './styled';
 
-const Login = () => {
-    const navigate = useNavigate()
+const Login: React.FC = () => {
+    const navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm();
-
     const onSubmit = (data: any) => {
         console.log(data);
-        // Lógica de autenticação aqui ainda vai ser implementada
+        // Lógica de autenticação aqui
+        navigate('/admin/dashboard'); // Navegar para a página de dashboard após o login
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div>
-                <label>Email</label>
-                <input type="email" {...register('email', { required: true })} />
-                {errors.email && <span>Email é obrigatório</span>}
-            </div>
-            <div>
-                <label>Senha</label>
-                <input type="password" {...register('password', { required: true })} />
-                {errors.password && <span>Senha é obrigatória</span>}
-            </div>
-            <button type="submit">Entrar</button>
-        </form>
+        <C.Form onSubmit={handleSubmit(onSubmit)}>
+            <C.Input type="text" placeholder="E-mail" {...register('email', { required: true, maxLength: 40 })} />
+            {errors.email && <C.ErrorMessage>E-mail é obrigatório</C.ErrorMessage>}
+            <C.Input type="password" placeholder="Senha" {...register('password', { required: true, min: 4, maxLength: 12 })} />
+            {errors.password && <C.ErrorMessage>Senha é obrigatória</C.ErrorMessage>}
+
+            <C.SubmitButton type="submit">Entrar</C.SubmitButton>
+        </C.Form>
     );
 };
 

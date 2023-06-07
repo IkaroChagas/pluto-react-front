@@ -58,5 +58,4 @@ width: 229px;
 height: 54px;
 right: 150px;
 border-radius: 4px;
-
 `;

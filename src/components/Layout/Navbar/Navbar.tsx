@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavbarContainer, Nav, NavItem, NavLink, ButtonLink, NavLogo } from './styled';
+import * as C from './styled';
 import logo from '../../../assets/logo.png';
 import Button from '../../../assets/button.png';
 
@@ -7,23 +7,42 @@ import Button from '../../../assets/button.png';
 const Navbar: React.FC = () => {
 
 
+    const handleInicioClick = () => {
+
+    }
+
+    const handleLoginClick = () => {
+
+    };
+
+    const handlePropositoClick = () => {
+
+    };
+
+    const handleUnidadesClick = () => {
+
+    };
+
     return (
-        <NavbarContainer>
+        <C.NavbarContainer>
+            <C.NavLogo onClick={handleInicioClick} to="/">
+                <img src={logo} />
+            </C.NavLogo>
 
-            <NavLogo to="/"><img src={logo} /></NavLogo>
-
-            <Nav>
-                <NavItem>
-                    <NavLink to="/proposito">Nosso Propósito</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink to="/unidades">Nossas Unidades</NavLink>
-                </NavItem>
-                <NavItem>
-                    <ButtonLink to="/login"><img src={Button} /></ButtonLink>
-                </NavItem>
-            </Nav >
-        </NavbarContainer >
+            <C.Nav>
+                <C.NavItem>
+                    <C.NavLink onClick={handlePropositoClick} to="/propositos">Nosso Propósito</C.NavLink>
+                </C.NavItem>
+                <C.NavItem>
+                    <C.NavLink onClick={handleUnidadesClick} to="/unidades">Nossas Unidades</C.NavLink>
+                </C.NavItem>
+                <C.NavItem>
+                    <C.ButtonLink to="/login">
+                        <img src={Button} />
+                    </C.ButtonLink>
+                </C.NavItem>
+            </C.Nav>
+        </C.NavbarContainer>
     );
 };
 
