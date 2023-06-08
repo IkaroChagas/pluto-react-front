@@ -11,7 +11,7 @@ export const FooterContainer = styled.div`
 export const FooterLogo = styled.img`
     position: absolute;
     left: 320px;
-    top: 4183px;
+    top: 4250px;
 `;
 
 export const TextFooter = styled.div`
@@ -19,7 +19,7 @@ export const TextFooter = styled.div`
     width: 141px;
     height: 28px;
     left: 1500px;
-    top: 4183px;
+    top: 4250px;
     font-family: 'Prata';
     font-style: normal;
     font-weight: 400;

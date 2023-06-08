@@ -94,7 +94,7 @@ export const EllipseredImage = styled.img`
     width: 150px;
     height: 150px;
     left: 460px;
-    top: 1650px;
+    top: 1760px;
 `;
 
 export const RectangleText = styled.h1`

@@ -12,7 +12,6 @@ export const NavLogo = styled(Link)`
 export const NavbarContainer = styled.nav`
   display: flex;
   background-color: #F6F6E9;
-  width: 100%;
   height: 110px;
 `;
 
@@ -43,7 +42,7 @@ export const NavItem = styled.li`
 export const NavLink = styled(Link)`
   text-decoration: none;
   color: #333;
-
+  justify-content: space-between;
   &:hover {
     color: #007A46;
   }
