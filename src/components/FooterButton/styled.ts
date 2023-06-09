@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const BackToTopButton = styled.button`
   position: fixed;
-  bottom: 2%;
-  right: 10%;
+  top: 57.75rem;
+  right: 12rem;
   border-radius: 50%;
   background: #F6F6E9;
   width: 50px;

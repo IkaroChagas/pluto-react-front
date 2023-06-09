@@ -2,24 +2,23 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.div`
     width: 100%;
-    height: 100px;
-    left: 0px;
-    top: 4338px;
+    height: 6.25rem;
+    left: 0rem;
+    top: 271.12rem;
     background: #F6F6E9;
 `;
 
 export const FooterLogo = styled.img`
     position: absolute;
-    left: 320px;
-    top: 4250px;
+    left: 20rem;
+    top: 262.75rem;
 `;
 
 export const TextFooter = styled.div`
     position: absolute;
-    width: 141px;
-    height: 28px;
-    left: 1500px;
-    top: 4250px;
+    width: 8.813rem;
+    left: 93.75rem;
+    top: 262.75rem;
     font-family: 'Prata';
     font-style: normal;
     font-weight: 400;

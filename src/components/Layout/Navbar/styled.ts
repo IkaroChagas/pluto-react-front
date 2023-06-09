@@ -16,23 +16,23 @@ export const NavbarContainer = styled.nav`
 `;
 
 export const Nav = styled.ul`
-position: absolute;
-justify-content: space-between;
-width: 158px;
-height: 25px;
-left: 1100px;
-top: 42.5px;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-list-style: none;
-display: flex;
-align-items: center;
-letter-spacing: 0.00892857em;
-text-transform: uppercase;
-color: #373734;
-white-space: nowrap;
+  position: absolute;
+  justify-content: space-between;
+  width: 158px;
+  height: 25px;
+  left: 1100px;
+  top: 42.5px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.00892857em;
+  text-transform: uppercase;
+  color: #373734;
+  white-space: nowrap;  
 `;
 
 export const NavItem = styled.li`

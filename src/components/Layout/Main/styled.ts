@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
+    padding: 0;
     margin: auto;
     background-color: #00C172;
     width: 100%;
@@ -33,12 +34,13 @@ export const ContainerImages = styled.div`
 `;
 
 export const HandsImage = styled.img`
-margin-bottom: 250px;
+  margin-bottom: 10.62rem;
   width: 150px;
   height: 150px;
 `;
 
 export const WorldImage = styled.img`
+margin-bottom: 10.62rem;
   width: 150px;
   height: 150px;
 `;
@@ -47,7 +49,7 @@ export const TextContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -200px;
+  margin-top: -10rem;
 `;
 
 export const TextHands = styled.p`
@@ -94,7 +96,7 @@ export const EllipseredImage = styled.img`
     width: 150px;
     height: 150px;
     left: 460px;
-    top: 1760px;
+    top: 108rem;
 `;
 
 export const RectangleText = styled.h1`
@@ -102,7 +104,7 @@ export const RectangleText = styled.h1`
     width: 413px;
     height: 225px;
     left: 320px;
-    top: 1900px;
+    top: 121rem;
     font-family: 'Prata';
     font-style: normal;
     font-weight: 400;
@@ -116,7 +118,7 @@ export const RectangleText2 = styled.p`
     width: 413px;
     height: 50px;
     left: 320px;
-    top: 2150px;
+    top: 137rem;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -199,8 +201,8 @@ export const MapContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 1280px;
-  height: 342px; 
+  width: 10rem;
+  height: 21.35rem; 
   padding-top: 100px;
   padding-bottom: 200px;
 `;

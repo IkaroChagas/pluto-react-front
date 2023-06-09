@@ -1,15 +1,15 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import SideBar from './Sidebar/Sidebar';
-import styles from './AdminLayout.module.css';
+import * as C from './styled'
 
 
 const AdminLayout: React.FC = () => {
     return (
-        <div className={styles.admin}>
+        <C.AdminContainer>
             <SideBar />
             <Outlet />
-        </div>
+        </C.AdminContainer>
     );
 }
 
