@@ -14,7 +14,7 @@ export const HeaderH1 = styled.h1`
     margin: auto;
     font-family: 'Prata';
     color: #F6F6E9;
-    padding-top: 120px;
+    padding-top: 8rem;
     padding-bottom: 70px;
     align-items: center;
     justify-content: center;

@@ -6,6 +6,7 @@ import Hands from '../../assets/hands2.png';
 
 
 const Login: React.FC = () => {
+
     const navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data: any) => {

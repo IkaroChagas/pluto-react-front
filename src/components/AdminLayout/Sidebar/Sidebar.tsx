@@ -1,57 +1,67 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import styles from './Sidebar.module.css'
-
+import * as C from "./styled";
+import HomeIcon from "../../../assets/sidebarvector1.png";
+import PlanIcon from "../../../assets/sidebarvector2.png";
+import UnitsIcon from "../../../assets/sidebarvector3.png";
 
 const SideBar: React.FC = () => {
-
-
     return (
-        <div className={styles.sidebar}>
-            <nav className={styles.navigation}>
-                <ul>
-                    <li>
-                        <NavLink to="/admin/dashboard" >
-                            <h3>Página Inicial</h3>
-                        </NavLink>
-                    </li>
+        <C.Sidebar>
+            <nav>
+                <C.Logo>pluto</C.Logo>
 
-                    <h3>Planos de Doação</h3>
-                    <ul>
-                        <li>
-                            <NavLink to="/admin/planos-de-doacao" >
-                                Listagem de planos
-                            </NavLink>
-                        </li>
-                    </ul>
-                    <li>
-                        <NavLink to="/curriculo/experiencia/cadastrar" >
-                            Cadastrar Experiência
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/curriculo/experiencia/listar" >
-                            Listar Experiências
-                        </NavLink>
-                    </li>
-                    <ul>
-                        <h3>Portfólio</h3>
-                    </ul>
-                    <li>
-                        <NavLink to="/projeto/cadastrar" >
-                            Cadastrar Projeto
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/portfolio/listar" >
-                            Listar Portfólio
-                        </NavLink>
-                    </li>
-                </ul>
+                <C.NavigationList>
+                    <C.NavigationItem>
+                        <C.NavigationLink to="/admin/dashboard">
+                            <C.NavHeader>
+                                <C.HomeIcon src={HomeIcon} />
+                                Página Inicial
+                            </C.NavHeader>
+                        </C.NavigationLink>
+                    </C.NavigationItem>
 
+                    <C.NavigationItem>
+                        <C.NavHeader>
+                            <C.PlanIcon src={PlanIcon} />
+                            Planos de Doação
+                        </C.NavHeader>
+                        <C.NavigationList>
+                            <C.NavigationItem>
+                                <C.NavigationLink to="/admin/listagem-de-planos">
+                                    Listagem de planos
+                                </C.NavigationLink>
+                            </C.NavigationItem>
+                        </C.NavigationList>
+                    </C.NavigationItem>
+
+                    <C.NavigationItem>
+                        <C.NavigationLink to="/admin/adicionar-plano">
+                            Adicionar plano
+                        </C.NavigationLink>
+                    </C.NavigationItem>
+
+                    <C.NavigationItem>
+                        <C.NavHeader>
+                            <C.UnitsIcon src={UnitsIcon} />
+                            Unidades
+                        </C.NavHeader>
+                        <C.NavigationList>
+                            <C.NavigationItem>
+                                <C.NavigationLink to="/admin/listagem-das-unidades">
+                                    Listagem das unidades
+                                </C.NavigationLink>
+                            </C.NavigationItem>
+                            <C.NavigationItem>
+                                <C.NavigationLink to="/admin/adicionar-unidade">
+                                    Adicionar unidade
+                                </C.NavigationLink>
+                            </C.NavigationItem>
+                        </C.NavigationList>
+                    </C.NavigationItem>
+                </C.NavigationList>
             </nav>
-        </div>
-    )
-}
+        </C.Sidebar>
+    );
+};
 
-export default SideBar
+export default SideBar;

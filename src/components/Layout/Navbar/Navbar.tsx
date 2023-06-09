@@ -12,14 +12,14 @@ const Navbar: React.FC = () => {
     };
 
     const handlePropositoClick = () => {
-        const element = document.getElementById('propositos');
+        const element = document.getElementById('#propositos');
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
     const handleUnidadesClick = () => {
-        const element = document.getElementById('unidades');
+        const element = document.getElementById('#unidades');
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
