@@ -11,7 +11,7 @@ export const MainContainer = styled.div`
 `;
 
 export const HeaderH1 = styled.h1`
-    display: block;
+    display: flex;
     margin: auto;
     font-family: 'Prata';
     color: #F6F6E9;

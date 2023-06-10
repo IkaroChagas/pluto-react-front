@@ -7,7 +7,7 @@ export const DashboardContainer = styled.div`
 
 export const DashboardHeader = styled.h1`
   position: absolute;
-  width: 18.0625rem;
+  width: 18.06rem;
   height: 2.375rem;
   left: 23rem;
   top: 4rem;
@@ -22,7 +22,7 @@ export const DashboardHeader = styled.h1`
 
 export const DashboardText = styled.p`
   position: absolute;
-  width: 32.3125rem;
+  width: 32.31rem;
   height: 5.25rem;
   left: 23rem;
   top: 9rem;
@@ -35,45 +35,99 @@ export const DashboardText = styled.p`
   color: #606060;
 `;
 
-export const FrameDashboardContainer = styled.div`
-
-`;
-
 export const FrameDashboard = styled.div`
   box-sizing: border-box;
   position: absolute;
-  width: 26.5625rem;
-  height: 11.25rem;
+  width: 27.56rem;
+  height: 12.25rem;
   left: 23rem;
   top: 17rem;
   background: #F5F5F5;
   border: 0.3125rem solid rgba(49, 203, 138, 0.5);
   box-shadow: 0px 0.25rem 0.25rem rgba(49, 203, 138, 0.25);
-  border-radius: 1.5625rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
 `;
 
 export const FrameDashboard2 = styled.div`
   box-sizing: border-box;
   position: absolute;
-  width: 26.5625rem;
-  height: 11.25rem;
-  left: 55rem;
+  width: 27.56rem;
+  height: 12.25rem;
+  left: 55.5rem;
   top: 17rem;
   background: #F5F5F5;
   border: 0.3125rem solid rgba(49, 203, 138, 0.5);
   box-shadow: 0px 0.25rem 0.25rem rgba(49, 203, 138, 0.25);
-  border-radius: 1.5625rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
 `;
 
 export const FrameDashboard3 = styled.div`
   box-sizing: border-box;
   position: absolute;
-  width: 26.5625rem;
-  height: 11.25rem;
+  width: 27.56rem;
+  height: 12.20rem;
   left: 88rem;
   top: 17rem;
   background: #F5F5F5;
   border: 0.3125rem solid rgba(49, 203, 138, 0.5);
   box-shadow: 0px 0.25rem 0.25rem rgba(49, 203, 138, 0.25);
-  border-radius: 1.5625rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+`;
+
+
+export const FrameText = styled.p`
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #606060;
+`;
+
+export const FrameImg = styled.img`
+  width: 8.75rem;
+  height: 8.75rem;
+  margin-right: 3rem;
+  margin-left: 1rem;
+`;
+
+export const FrameData = styled.p`
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 40px;
+  color: #00C172;
+`;
+
+
+export const MajorFrame = styled.div`
+  box-sizing: border-box;
+  position: absolute;
+  width: 42.7rem;
+  height: 20.8rem;
+  left: 23rem;
+  top: 36.4rem;
+  background: #F5F5F5;
+  border: 0.3125rem solid rgba(49, 203, 138, 0.5);
+  box-shadow: 0px 0.25rem 0.25rem rgba(49, 203, 138, 0.25);
+  border-radius: 0.5rem;
+`;
+
+export const MajorFrame2 = styled.div`
+  box-sizing: border-box;
+  position: absolute;
+  width: 42.7rem;
+  height: 20.8rem;
+  left: 73rem;
+  top: 36.4rem;
+  background: #F5F5F5;
+  border: 0.3125rem solid rgba(49, 203, 138, 0.5);
+  box-shadow: 0px 0.25rem 0.25rem rgba(49, 203, 138, 0.25);
+  border-radius: 0.5rem;
 `;
