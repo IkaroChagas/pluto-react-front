@@ -7,6 +7,7 @@ import Card1 from '../../../assets/Card1.png';
 import Card2 from '../../../assets/Card2.png';
 import Andress from '../../../assets/andresscard.png';
 import Maps from "../../MapContainer/Maps";
+import Hearth from '../../../assets/hearth.png';
 
 
 const Main: React.FC = () => {
@@ -41,10 +42,30 @@ const Main: React.FC = () => {
                 <C.RectangleText2>
                     Faça a sua doação e experimente o prazer de impactar vidas todos os dias
                 </C.RectangleText2>
-                <C.RectangleCards>
-                    <C.FirstCard src={Card1} />
-                    <C.SecondCard src={Card2} />
-                </C.RectangleCards>
+
+                <C.FirstCard>
+                    <C.FirstCardImage src={Card1} />
+                </C.FirstCard>
+
+                <C.CardButton>
+                    <C.CardText>
+                        Doar agora mesmo
+                        <C.CardIcon src={Hearth} />
+                    </C.CardText>
+                </C.CardButton>
+
+                <C.SecondCard>
+                    <C.SecondCardImage src={Card2} />
+                </C.SecondCard>
+
+                <C.CardButton2>
+                    <C.CardText2>
+                        Doar agora mesmo
+                        <C.CardIcon2 src={Hearth} />
+                    </C.CardText2>
+                </C.CardButton2>
+
+
             </C.Rectangle>
 
             <C.TextContainer2>

@@ -133,18 +133,61 @@ export const RectangleCards = styled.div`
     align-items: center;
 `;
 
-export const FirstCard = styled.img`
+
+export const FirstCard = styled.div`
+  position: absolute;
+  width: 20rem;
+  height: 27.73rem;
+  left: 54.5rem;
+  top: 118rem;
+  border-radius: 1.3333rem;
+  overflow: hidden;
+
+  ::before {
+    content: '';
     position: absolute;
-    width: 304px;
-    height: 431px;
-    left: 872px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    opacity: 0.7;
+  }
 `;
 
-export const SecondCard = styled.img`
+export const FirstCardImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+
+export const SecondCard = styled.div`
+  position: absolute;
+  width: 20rem;
+  height: 27.73rem;
+  left: 81rem;
+  top: 118rem;
+  border-radius: 1.33rem;
+  overflow: hidden;
+
+
+  ::before {
+    content: '';
     position: absolute;
-    width: 304px;
-    height: 431px;
-    left: 1296px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    opacity: 0.7;
+  }
+`;
+
+export const SecondCardImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 export const TextContainer2 = styled.div`
@@ -153,6 +196,82 @@ export const TextContainer2 = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100%;
+`;
+
+export const CardButton = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  position: absolute;
+  width: 214px;
+  height: 44px;
+  left: 896px;
+  top: 140rem;
+  background: #F8475E;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  cursor: pointer;
+`;
+
+export const CardButton2 = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  position: absolute;
+  width: 214px;
+  height: 44px;
+  left: 82.6rem;
+  top: 140rem;
+  background: #F8475E;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  cursor: pointer;
+`;
+
+
+export const CardText = styled.p`
+  width: 122px;
+  height: 16px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+  letter-spacing: 0.008rem;
+  color: #FFFFFF;
+  margin-right: 2rem;
+`;
+
+export const CardText2 = styled.p`
+  width: 122px;
+  height: 16px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+  letter-spacing: 0.008rem;
+  color: #FFFFFF;
+  margin-right: 2rem;
+`;
+
+
+export const CardIcon = styled.img`
+  position: absolute;
+  left: 74.68%;
+  top: 34.5%;
+  bottom: 13.97%;
+`;
+
+export const CardIcon2 = styled.img`
+  position: absolute;
+  left: 74.68%;
+  top: 34.5%;
+  bottom: 13.97%;
 `;
 
 export const Header2 = styled.h1`
