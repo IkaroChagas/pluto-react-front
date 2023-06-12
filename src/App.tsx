@@ -5,8 +5,10 @@ import AdminLayout from './components/AdminLayout/AdminLayout';
 import AddPlans from './Pages/Plans/AddPlans';
 import Dashboard from './Pages/Dashboard/Dashboard';
 
+
 const App = () => {
   return (
+
     <Routes>
       <Route path="/" element={<Layout />} />
       <Route path="admin" element={<AdminLayout />}>
@@ -15,6 +17,7 @@ const App = () => {
       </Route>
       <Route path="login" element={<Login />} />
     </Routes>
+
   );
 };
 

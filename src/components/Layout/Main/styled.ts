@@ -140,7 +140,7 @@ export const FirstCard = styled.div`
   height: 27.73rem;
   left: 54.5rem;
   top: 118rem;
-  border-radius: 1.3333rem;
+  border-radius: 1.33rem;
   overflow: hidden;
 
   ::before {

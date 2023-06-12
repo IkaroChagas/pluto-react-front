@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const AddPlansContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;  
 `;
 
 export const Frame = styled.div`
@@ -21,7 +24,7 @@ export const Title = styled.h1`
   width: 229px;
   height: 38px;
   left: 50px;
-  top: 15px;
+  top: 2rem;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -31,38 +34,31 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  position: absolute;
-  width: 416px;
-  height: 28px;
-  left: 0px;
-  top: 0px;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: 0.15px;
-  color: #545454; 
+ 
 `;
 
 export const FormPlan = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 2.7rem;
+  margin-left: 2rem;
 `;
 
 export const InputImage = styled.input`
   box-sizing: border-box;
   display: flex;
+  margin: auto;
   flex-direction: row;
   align-items: center;
   padding: 10px 10px 10px 16px;
-  gap: 10px;
+  margin-top: 9.5rem;
+  margin-left: 1rem;
   width: 644px;
   height: 44px;
   background: #F9F9F9;
   border: 1px solid #D9D9D9;
   border-radius: 4px;
   order: 0;
-  align-self: stretch;
-  flex-grow: 0;
 `;
 
 export const InputTitle = styled.input`
@@ -72,31 +68,27 @@ export const InputTitle = styled.input`
   align-items: center;
   padding: 10px 10px 10px 16px;
   gap: 10px;
+  margin-left: 1rem;
   width: 454px;
   height: 44px;
   background: #F9F9F9;
   border: 1px solid #D9D9D9;
   border-radius: 4px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 `;
 
 export const InputTitleColor = styled.input`
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   padding: 10px 10px 10px 16px;
-  gap: 10px;
+  margin-left: 31.2rem;
+  margin-top: -5.45rem;
   width: 160px;
   height: 44px;
   background: #F9F9F9;
   border: 1px solid #D9D9D9;
   border-radius: 4px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 `;
 
 export const InputPlanValue = styled.input`
@@ -111,9 +103,7 @@ export const InputPlanValue = styled.input`
   background: #F9F9F9;
   border: 1px solid #D9D9D9;
   border-radius: 4px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  margin-left: 1rem;
 `;
 
 export const InputButtonColor = styled.input`
@@ -122,15 +112,13 @@ export const InputButtonColor = styled.input`
   flex-direction: row;
   align-items: center;
   padding: 10px 10px 10px 16px;
-  gap: 10px;
   width: 307px;
   height: 44px;
+  margin-left: 22.2rem;
+  margin-top: -5.43rem;
   background: #F9F9F9;
   border: 1px solid #D9D9D9;
   border-radius: 4px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 `;
 
 export const InputTextColor = styled.input`
@@ -139,15 +127,12 @@ export const InputTextColor = styled.input`
   flex-direction: row;
   align-items: center;
   padding: 10px 10px 10px 16px;
-  gap: 10px;
+  margin-left: 1rem;
   width: 307px;
   height: 44px;
   background: #F9F9F9;
   border: 1px solid #D9D9D9;
   border-radius: 4px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 `;
 
 export const InputButtonIconColor = styled.input`
@@ -156,52 +141,60 @@ export const InputButtonIconColor = styled.input`
   flex-direction: row;
   align-items: center;
   padding: 10px 10px 10px 16px;
-  gap: 10px;
   width: 307px;
   height: 44px;
+  margin-left: 22.2rem;
+  margin-top: -5.47rem;
   background: #F9F9F9;
   border: 1px solid #D9D9D9;
   border-radius: 4px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 `;
 
 export const ButtonDelete = styled.button`
   display: flex;
-  flex-direction: row;
   justify-content: center;
   width: 80px;
   height: 40px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 36px;
   align-items: center;
   padding: 10px 15px;
   gap: 10px;
   position: absolute;
-  left: 40.94%;
+  left: 3.5rem;
   right: 54.53%;
-  top: 71.76%;
-  bottom: 24.17%;
+  top: 34rem;
   background: #F8475E;
   color: #F6F6E9;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border: none;
   border-radius: 4px;
+  cursor: pointer;
 `;
 
 export const ButtonSend = styled.button`
-  display: flex;
-  flex-direction: row;
+   display: flex;
   justify-content: center;
+  width: 80px;
+  height: 40px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 36px;
   align-items: center;
   padding: 10px 15px;
   gap: 10px;
-  width: 80px;
-  height: 40px;
-  color: #F6F6E9;
   position: absolute;
-  left: 69.9%;
-  right: 25.52%;
-  top: 71.76%;
-  bottom: 24.17%;
+  left: 38.5rem;
+  right: 54.53%;
+  top: 34rem;
+  background: #F8475E;
+  color: #F6F6E9;
+  border: none;
+  cursor: pointer;
   background: #00C172;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
