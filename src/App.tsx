@@ -4,6 +4,7 @@ import Login from './Pages/Login/Login';
 import AdminLayout from './components/AdminLayout/AdminLayout';
 import AddPlans from './Pages/Plans/AddPlans';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import AddUnit from './Pages/Unit/AddUnit';
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Route path="admin" element={<AdminLayout />}>
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="/admin/adicionar-plano" element={<AddPlans />} />
+        <Route path="/admin/adicionar-unidade" element={<AddUnit />} />
       </Route>
       <Route path="login" element={<Login />} />
     </Routes>

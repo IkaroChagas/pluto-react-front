@@ -142,7 +142,7 @@ export const Input = styled.input`
 export const ErrorMessage = styled.span`
   color: red;
   font-family: "Roboto";
-  font-size: 15px;
+  font-size: 12px;
 `;
 
 export const SubmitButton = styled.button`

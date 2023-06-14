@@ -31,24 +31,24 @@ const AddPlans: React.FC = () => {
 
                 <C.FormPlan onSubmit={handleSubmit(onSubmit)}>
 
-                    <C.InputImage {...register("imageLink")} placeholder="Link da imagem" />
+                    <C.InputImage {...register("imageLink", { required: true })} placeholder="Link da imagem" />
 
 
-                    <C.InputTitle {...register("title")} placeholder="Título" />
+                    <C.InputTitle {...register("title", { required: true })} placeholder="Título" />
 
 
-                    <C.InputTitleColor {...register("titleColor")} placeholder="Cor do título" />
+                    <C.InputTitleColor {...register("titleColor", { required: true })} placeholder="Cor do título" />
 
 
-                    <C.InputPlanValue {...register("planValue")} placeholder="Valor do plano" />
+                    <C.InputPlanValue {...register("planValue", { required: true })} placeholder="Valor do plano" />
 
 
-                    <C.InputButtonColor {...register("buttonColor")} placeholder="Cor do botão" />
+                    <C.InputButtonColor {...register("buttonColor", { required: true })} placeholder="Cor do botão" />
 
-                    <C.InputTextColor {...register("textColor")} placeholder="Cor do texto" />
+                    <C.InputTextColor {...register("textColor", { required: true })} placeholder="Cor do texto" />
 
 
-                    <C.InputButtonIconColor {...register("buttonIconColor")} placeholder="Cor do ícone do botão" />
+                    <C.InputButtonIconColor {...register("buttonIconColor", { required: true })} placeholder="Cor do ícone do botão" />
 
                     <div>
                         <C.ButtonDelete type="button" onClick={handleDelete}>Limpar</C.ButtonDelete>
