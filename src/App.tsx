@@ -6,6 +6,7 @@ import AddPlans from './Pages/Plans/AddPlans';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import AddUnit from './Pages/Unit/AddUnit';
 import ListPlans from './Pages/Plans/ListPlans/ListOfPlans';
+import ListOfUnits from './Pages/Unit/ListUnits/ListOfUnits';
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/admin/adicionar-plano" element={<AddPlans />} />
         <Route path="/admin/listagem-de-planos" element={<ListPlans />} />
         <Route path="/admin/adicionar-unidade" element={<AddUnit />} />
+        <Route path="/admin/listagem-das-unidades" element={<ListOfUnits />} />
       </Route>
       <Route path="login" element={<Login />} />
     </Routes>

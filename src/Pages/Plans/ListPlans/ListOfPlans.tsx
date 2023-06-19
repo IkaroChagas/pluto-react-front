@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Table from "../../../components/Table/Table";
+import Table, { Column } from "../../../components/Table/Table";
+import { getAllPlans, deletePlans, Plans } from "../../../services/PlansServices";
+
 
 
 const ListOfPlans: React.FC = () => {
@@ -27,7 +29,7 @@ const ListOfPlans: React.FC = () => {
     const handleDelete = async (plans: Plans) => {
         try {
             await deletePlans(plans.id);
-            fetchExperiencia()
+            fetchPlans()
             alert("Plano deletado com sucesso")
         } catch (error) {
             alert("Ocorreu um erro ao tentar excluir")
@@ -35,13 +37,13 @@ const ListOfPlans: React.FC = () => {
     };
 
     const columns: Column<Plans>[] = [
-        { header: "Imagem", accessor: "imagem" },
-        { header: "Titulo", accessor: "titulo" },
-        { header: "Cor do titulo", accessor: "corDoTitulo" },
-        { header: "Valor do plano", accessor: "valorDoPlano" },
-        { header: "Cor do botão", accessor: "corDoBotao" },
-        { header: "Cor do texto do botão", accessor: "corDoTextoDoBotao" },
-        { header: "Cor do ícone botão", accessor: "corDoIconeBotao" },
+        { header: "Imagem", accessor: "image" },
+        { header: "Titulo", accessor: "title" },
+        { header: "Cor do titulo", accessor: "titleColor" },
+        { header: "Valor do plano", accessor: "planValue" },
+        { header: "Cor do botão", accessor: "buttonColor" },
+        { header: "Cor do texto do botão", accessor: "buttonTextColor" },
+        { header: "Cor do ícone botão", accessor: "buttonIconColor" },
     ];
 
     return (
