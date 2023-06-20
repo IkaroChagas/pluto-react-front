@@ -15,7 +15,6 @@ interface Props {
 
 const AuthContext = createContext<AuthContextProps>({} as AuthContextProps);
 
-
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider: React.FC<Props> = ({ children }) => {
@@ -32,10 +31,10 @@ export const AuthProvider: React.FC<Props> = ({ children }) => {
         setIsLoading(false);
     }, []);
 
-    const login = (loggedUser: User) => {
-        setUser(loggedUser);
+    const login = (loggedInUser: User) => {
+        setUser(loggedInUser);
         setAuthenticated(true);
-        localStorage.setItem("user", JSON.stringify(loggedUser));
+        localStorage.setItem("user", JSON.stringify(loggedInUser));
     };
 
     const logout = () => {
@@ -48,5 +47,5 @@ export const AuthProvider: React.FC<Props> = ({ children }) => {
         <AuthContext.Provider value={{ authenticated, user, login, logout, isLoading }}>
             {children}
         </AuthContext.Provider>
-    )
-}
+    );
+};
