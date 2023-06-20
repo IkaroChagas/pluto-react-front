@@ -11,14 +11,14 @@ export const FooterContainer = styled.div`
 export const FooterLogo = styled.img`
     position: absolute;
     left: 20rem;
-    top: 262.75rem;
+    top: 272.75rem;
 `;
 
 export const TextFooter = styled.div`
     position: absolute;
     width: 8.813rem;
     left: 93.75rem;
-    top: 262.75rem;
+    top: 272.75rem;
     font-family: 'Prata';
     font-style: normal;
     font-weight: 400;

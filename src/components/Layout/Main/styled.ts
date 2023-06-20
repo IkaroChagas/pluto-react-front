@@ -302,16 +302,7 @@ export const Text2 = styled.p`
 `;
 
 export const AndressContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-row-gap: 45px;
-  grid-column-gap: 0px;
-`;
-
-export const AndressImage = styled.img`
-    margin: auto;
-    width: 550px;
-    height: auto;
+ display: flex;
 `;
 
 export const MapContainer = styled.div`

@@ -5,9 +5,9 @@ import World from '../../../assets/world.png';
 import Ellipsered from '../../../assets/ellipsered.png';
 import Card1 from '../../../assets/Card1.png';
 import Card2 from '../../../assets/Card2.png';
-import Andress from '../../../assets/andresscard.png';
 import Maps from "../../MapContainer/Maps";
 import Hearth from '../../../assets/hearth.png';
+import AddressCard from "../../CardAddress/CardAddress";
 
 
 const Main: React.FC = () => {
@@ -80,10 +80,7 @@ const Main: React.FC = () => {
             </C.TextContainer2>
 
             <C.AndressContainer>
-                <C.AndressImage src={Andress} />
-                <C.AndressImage src={Andress} />
-                <C.AndressImage src={Andress} />
-                <C.AndressImage src={Andress} />
+                <AddressCard/>
             </C.AndressContainer>
 
             <C.MapContainer>

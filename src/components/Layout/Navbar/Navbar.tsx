@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
                 </C.NavItem>
                 <C.NavItem>
                     <C.Section id="unidades">
-                        <ScrollLink activeClass="active" to="unidades" spy={true} smooth={true} offset={2500} duration={500} onClick={handleUnidadesClick}>
+                        <ScrollLink activeClass="active" to="unidades" spy={true} smooth={true} offset={2700} duration={500} onClick={handleUnidadesClick}>
                             Nossas Unidades
                         </ScrollLink>
                     </C.Section>
