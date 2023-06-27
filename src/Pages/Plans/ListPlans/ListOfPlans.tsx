@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Table, { Column } from "../../../components/Table/Table";
-import { getAllPlans, deletePlans, Plans } from "../../../services/PlansServices";
-
+import { getAllPlans, deletePlan, IPlan } from "../../../services/PlansServices";
 
 
 const ListOfPlans: React.FC = () => {
     const navigate = useNavigate();
-    const [plans, setPlans] = useState<Plans[]>([]);
+    const [plans, setPlans] = useState<IPlan[]>([]);
 
     const fetchPlans = async () => {
         try {
@@ -22,13 +21,13 @@ const ListOfPlans: React.FC = () => {
         fetchPlans()
     }, []);
 
-    const handleEdit = (plans: Plans) => {
+    const handleEdit = (plans: IPlan) => {
         navigate("/admin/listagem-de-planos/editar", { state: plans })
     };
 
-    const handleDelete = async (plans: Plans) => {
+    const handleDelete = async (plans: IPlan) => {
         try {
-            await deletePlans(plans.id);
+            await deletePlan(plans.id);
             fetchPlans()
             alert("Plano deletado com sucesso")
         } catch (error) {
@@ -36,7 +35,7 @@ const ListOfPlans: React.FC = () => {
         }
     };
 
-    const columns: Column<Plans>[] = [
+    const columns: Column<IPlan>[] = [
         { header: "Imagem", accessor: "image" },
         { header: "Titulo", accessor: "title" },
         { header: "Cor do titulo", accessor: "titleColor" },

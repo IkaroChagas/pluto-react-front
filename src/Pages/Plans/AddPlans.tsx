@@ -1,23 +1,22 @@
 import React from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import * as C from './styled';
+import { createPlan } from "../../services/PlansServices";
 
-interface FormValues {
-    imageLink: string;
-    title: string;
-    titleColor: string;
-    planValue: string;
-    buttonColor: string;
-    textColor: string;
-    buttonIconColor: string;
-}
+
 
 const AddPlans: React.FC = () => {
-    const { register, handleSubmit, reset } = useForm<FormValues>();
+    const { register, handleSubmit, reset } = useForm();
 
-    const onSubmit: SubmitHandler<FormValues> = (data) => {
-        console.log(data);
-        reset();
+    const onSubmit = async (data: any) => {
+        try {
+            await createPlan(data);
+            reset();
+            alert('Formulário enviado com sucesso!');
+          } catch (error) {
+            console.log(error);
+            alert('Ocorreu um erro!');
+          }
     };
 
     const handleDelete = () => {
@@ -31,7 +30,7 @@ const AddPlans: React.FC = () => {
 
                 <C.FormPlan onSubmit={handleSubmit(onSubmit)}>
 
-                    <C.InputImage {...register("imageLink", { required: true })} placeholder="Link da imagem" />
+                    <C.InputImage {...register("image", { required: true })} placeholder="Link da imagem" />
 
 
                     <C.InputTitle {...register("title", { required: true })} placeholder="Título" />
@@ -45,8 +44,7 @@ const AddPlans: React.FC = () => {
 
                     <C.InputButtonColor {...register("buttonColor", { required: true })} placeholder="Cor do botão" />
 
-                    <C.InputTextColor {...register("textColor", { required: true })} placeholder="Cor do texto" />
-
+                    <C.InputTextColor {...register("buttonTextColor", { required: true })} placeholder="Cor do texto" />
 
                     <C.InputButtonIconColor {...register("buttonIconColor", { required: true })} placeholder="Cor do ícone do botão" />
 

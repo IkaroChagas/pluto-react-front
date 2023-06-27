@@ -1,6 +1,6 @@
 import api from './api'
 
-export interface Plans {
+export interface IPlan {
     id?: number,
     image: string,
     title: string,
@@ -12,35 +12,35 @@ export interface Plans {
     buttonIconColor: string,
 }
 
-export const createPlans = async (plans: Plans): Promise<Plans> => {
-    const response = await api.post<Plans>('admin/adicionar-plano', plans);
+export const createPlan = async (plan: IPlan): Promise<IPlan> => {
+    const response = await api.post<IPlan>('/plans', plan);
     return response.data;
 }
 
-export const getAllPlans = async (): Promise<Plans[]> => {
-    const response = await api.get<Plans[]>('/planos');
+export const getAllPlans = async (): Promise<IPlan[]> => {
+    const response = await api.get<IPlan[]>('/plans');
     return response.data;
 }
 
-export const getPlansById = async (id: number): Promise<Plans> => {
-    const response = await api.get<Plans>(`/planos/${id}`);
+export const getPlansById = async (id: number): Promise<IPlan> => {
+    const response = await api.get<IPlan>(`/plans/${id}`);
     return response.data;
 }
 
-export const updatePlans = async (plans: Plans): Promise<Plans> => {
-    const response = await api.put<Plans>(`/planos/${plans.id}`, plans);
+export const updatePlan = async (plan: IPlan): Promise<IPlan> => {
+    const response = await api.put<IPlan>(`/plans/${plan.id}`, plan);
     return response.data;
 }
 
-export const deletePlans = async (id: number | undefined): Promise<Plans> => {
-    const response = await api.delete<Plans>(`/planos/${id}`);
+export const deletePlan = async (id: number | undefined): Promise<IPlan> => {
+    const response = await api.delete<IPlan>(`/plans/${id}`);
     return response.data;
 }
 
-export const createOrUpdatePlans = async (plans: Plans): Promise<Plans> => {
-    if (!plans.id) {
-        return await createPlans(plans);
+export const createOrUpdatePlans = async (plan: IPlan): Promise<IPlan> => {
+    if (!plan.id) {
+        return await createPlan(plan);
     } else {
-        return await updatePlans(plans);
+        return await updatePlan(plan);
     }
 }

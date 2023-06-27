@@ -7,19 +7,19 @@ const AddressCard: React.FC = () => {
     <GridContainer>
       <StyledCard>
         <CardContent>
-          <StyledTitle variant="h4" component="h1" gutterBottom>
+          <StyledTitle variant="h4" gutterBottom>
             Fortaleza-CE
             <h6>unidade Ubirajara</h6>
           </StyledTitle>
-          <StyledInfo variant="subtitle1" component="h2" gutterBottom>
+          <StyledInfo variant="subtitle1" gutterBottom>
             <h4>Endereço:</h4> 
             Rua dos pracinhas, 324, Passaré<br />
             61090130
           </StyledInfo>
-          <StyledTitle variant="h6" component="h3" gutterBottom>
+          <StyledTitle variant="h6" gutterBottom>
             Responsável pela unidade:
           </StyledTitle>
-          <StyledInfo variant="body1" component="h4" gutterBottom>
+          <StyledInfo variant="body1" gutterBottom>
             José de Alencar<br />
             josedealen@gmail.com
           </StyledInfo>
@@ -28,19 +28,19 @@ const AddressCard: React.FC = () => {
 
       <StyledCard>
         <CardContent>
-          <StyledTitle variant="h4" component="h1" gutterBottom>
+          <StyledTitle variant="h4" gutterBottom>
             Fortaleza-CE
             <h6>unidade Ubirajara</h6>
           </StyledTitle>
-          <StyledInfo variant="subtitle1" component="h2" gutterBottom>
-          <h4>Endereço:</h4> 
-          Rua dos pracinhas, 324, Passaré<br />
+          <StyledInfo variant="subtitle1" gutterBottom>
+            <h4>Endereço:</h4> 
+            Rua dos pracinhas, 324, Passaré<br />
             61090130
           </StyledInfo>
-          <StyledTitle variant="h6" component="h3" gutterBottom>
+          <StyledTitle variant="h6" gutterBottom>
             Responsável pela unidade:
           </StyledTitle>
-          <StyledInfo variant="body1" component="h4" gutterBottom>
+          <StyledInfo variant="body1" gutterBottom>
             José de Alencar<br />
             josedealen@gmail.com
           </StyledInfo>
@@ -49,19 +49,19 @@ const AddressCard: React.FC = () => {
 
       <StyledCard>
         <CardContent>
-          <StyledTitle variant="h4" component="h1" gutterBottom>
+          <StyledTitle variant="h4" gutterBottom>
             Fortaleza-CE
             <h6>unidade Ubirajara</h6>
           </StyledTitle>
-          <StyledInfo variant="subtitle1" component="h2" gutterBottom>
-          <h4>Endereço:</h4> 
-          Rua dos pracinhas, 324, Passaré<br />
+          <StyledInfo variant="subtitle1" gutterBottom>
+            <h4>Endereço:</h4> 
+            Rua dos pracinhas, 324, Passaré<br />
             61090130
           </StyledInfo>
-          <StyledTitle variant="h6" component="h3" gutterBottom>
+          <StyledTitle variant="h6" gutterBottom>
             Responsável pela unidade:
           </StyledTitle>
-          <StyledInfo variant="body1" component="h4" gutterBottom>
+          <StyledInfo variant="body1" gutterBottom>
             José de Alencar<br />
             josedealen@gmail.com
           </StyledInfo>
@@ -70,21 +70,21 @@ const AddressCard: React.FC = () => {
 
       <StyledCard>
         <CardContent>
-          <StyledTitle variant="h4" component="h1" gutterBottom>
+          <StyledTitle variant="h4" gutterBottom>
             Fortaleza-CE
             <h6>unidade Ubirajara</h6>
           </StyledTitle>
-          <StyledInfo variant="subtitle1" component="h2" gutterBottom>
-          <h4>Endereço:</h4>  
-          Rua dos pracinhas, 324, Passaré<br />
+          <StyledInfo variant="subtitle1" gutterBottom>
+            <h4>Endereço:</h4> 
+            Rua dos pracinhas, 324, Passaré<br />
             61090130
           </StyledInfo>
-          <StyledTitle variant="h6" component="h3" gutterBottom>
+          <StyledTitle variant="h6" gutterBottom>
             Responsável pela unidade:
           </StyledTitle>
-          <StyledInfo variant="body1" component="h4" gutterBottom>
+          <StyledInfo variant="body1" gutterBottom>
             José de Alencar<br />
-            josedealenar@gmail.com
+            josedealen@gmail.com
           </StyledInfo>
         </CardContent>
       </StyledCard>
@@ -93,4 +93,3 @@ const AddressCard: React.FC = () => {
 }
 
 export default AddressCard;
-
