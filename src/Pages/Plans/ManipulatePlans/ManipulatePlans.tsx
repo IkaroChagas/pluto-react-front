@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { createOrUpdatePlans, IPlan } from "../../../services/PlansServices";
+import { createOrUpdatePlan, IPlan } from "../../../services/PlansServices";
 import { useNavigate } from "react-router-dom";
 
 const ManipulatePlans: React.FC = () => {
@@ -22,9 +22,9 @@ const ManipulatePlans: React.FC = () => {
 
   const onSubmit = async (values: IPlan) => {
     try {
-      await createOrUpdatePlans(values);
+      await createOrUpdatePlan(values);
       reset(initialValues);
-      navigate("/admin/listagem-de-planos");
+      navigate("/admin/listagem-de-planos/editar");
       alert("Formulário enviado com sucesso!");
     } catch (error) {
       console.log(error);

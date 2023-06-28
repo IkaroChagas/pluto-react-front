@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import Login from './Pages/Login/Login';
 import AdminLayout from './components/AdminLayout/AdminLayout';
@@ -20,13 +20,14 @@ const App = () => {
       <Route path="admin" element={<AdminLayout />}>
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="/admin/adicionar-plano" element={<AddPlans />} />
+        <Route path="/admin/listagem-de-planos/editar" element={<AddPlans />} />
         <Route path="/admin/listagem-de-planos" element={<ListPlans />} />
-        <Route path="/admin//admin/listagem-de-planos" element={<ManipulatePlans />} />
+        <Route path="/admin/listagem-de-planos/editar" element={<ManipulatePlans />} />
         <Route path="/admin/adicionar-unidade" element={<AddUnit />} />
         <Route path="/admin/listagem-das-unidades" element={<ListOfUnits />} />
-        <Route path="/admin//admin/listagem-das-unidades" element={<ManipulateUnit />} />
+        <Route path="/admin/admin/listagem-das-unidades" element={<ManipulateUnit />} />
       </Route>
-      <Route path="login" element={<Login />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
 
   );

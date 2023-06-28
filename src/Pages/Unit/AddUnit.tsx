@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import * as C from './styled'
+import { createUnit } from "../../services/UnitServices";
 
 interface FormValues {
     unit: string;
@@ -15,9 +16,15 @@ interface FormValues {
 const AddUnit: React.FC = () => {
     const { register, handleSubmit, reset } = useForm<FormValues>();
 
-    const onSubmit: SubmitHandler<FormValues> = (data) => {
-        console.log(data);
-        reset();
+    const onSubmit: SubmitHandler<FormValues> = async (data) => {
+        try {
+            await createUnit(data);
+            reset();
+            alert('Formulário enviado com sucesso!');
+          } catch (error) {
+            console.log(error);
+            alert('Ocorreu um erro!');
+          }
     };
 
     const handleDelete = () => {

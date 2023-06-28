@@ -1,13 +1,13 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { createOrUpdateUnits, Units } from '../../../services/UnitServices';
+import { createOrUpdateUnit, IUnits } from '../../../services/UnitServices';
 import { useNavigate } from 'react-router-dom';
 
 const ManipulateUnit: React.FC = () => {
   const navigate = useNavigate();
-  const { handleSubmit, register, reset } = useForm<Units>();
+  const { handleSubmit, register, reset } = useForm<IUnits>();
 
-  const initialValues: Units = {
+  const initialValues: IUnits = {
     unit: '',
     address: '',
     cityState: '',
@@ -17,9 +17,9 @@ const ManipulateUnit: React.FC = () => {
     bodyColor: '',
   };
 
-  const onSubmit = async (values: Units) => {
+  const onSubmit = async (values: IUnits) => {
     try {
-      await createOrUpdateUnits(values);
+      await createOrUpdateUnit(values);
       reset(initialValues);
       navigate('/admin/listagem-das-unidades');
       alert('Formulário enviado com sucesso!');

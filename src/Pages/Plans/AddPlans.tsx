@@ -4,7 +4,6 @@ import * as C from './styled';
 import { createPlan } from "../../services/PlansServices";
 
 
-
 const AddPlans: React.FC = () => {
     const { register, handleSubmit, reset } = useForm();
 

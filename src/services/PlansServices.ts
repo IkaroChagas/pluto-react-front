@@ -22,7 +22,7 @@ export const getAllPlans = async (): Promise<IPlan[]> => {
     return response.data;
 }
 
-export const getPlansById = async (id: number): Promise<IPlan> => {
+export const getPlanById = async (id: number): Promise<IPlan> => {
     const response = await api.get<IPlan>(`/plans/${id}`);
     return response.data;
 }
@@ -37,7 +37,7 @@ export const deletePlan = async (id: number | undefined): Promise<IPlan> => {
     return response.data;
 }
 
-export const createOrUpdatePlans = async (plan: IPlan): Promise<IPlan> => {
+export const createOrUpdatePlan = async (plan: IPlan): Promise<IPlan> => {
     if (!plan.id) {
         return await createPlan(plan);
     } else {

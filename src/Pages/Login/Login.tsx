@@ -35,7 +35,7 @@ const Login: React.FC = () => {
         <C.Message>Realize o login para prosseguir</C.Message>
 
         <C.Form onSubmit={handleSubmit<User>(onSubmit)}>
-          <C.Input type="text" placeholder="E-mail" {...register('email', { required: true, maxLength: 40 })} />
+          <C.Input type="text" placeholder="E-mail" {...register('email', { required: true, maxLength: 60 })} />
           {errors.email && <C.ErrorMessage>E-mail é obrigatório</C.ErrorMessage>}
 
           <C.Input type="password" placeholder="Senha" {...register('password', { required: true, min: 4, maxLength: 12 })} />
