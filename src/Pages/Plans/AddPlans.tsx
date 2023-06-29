@@ -4,6 +4,7 @@ import * as C from './styled';
 import { createPlan } from "../../services/PlansServices";
 
 
+
 const AddPlans: React.FC = () => {
     const { register, handleSubmit, reset } = useForm();
 
@@ -23,6 +24,7 @@ const AddPlans: React.FC = () => {
     };
 
     return (
+        <>
         <C.AddPlansContainer>
             <C.Frame>
                 <C.Title>Adicionar Plano</C.Title>
@@ -54,6 +56,7 @@ const AddPlans: React.FC = () => {
                 </C.FormPlan>
             </C.Frame>
         </C.AddPlansContainer>
+        </>
     );
 };
 

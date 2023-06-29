@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Table, { Column } from "../../../components/Table/Table";
 import { getAllPlans, deletePlan, IPlan } from "../../../services/PlansServices";
+import Dashboard from "../../Dashboard/Dashboard";
 
 
 const ListOfPlans: React.FC = () => {
@@ -34,6 +35,7 @@ const ListOfPlans: React.FC = () => {
             alert("Ocorreu um erro ao tentar excluir")
         }
     };
+    
 
     const columns: Column<IPlan>[] = [
         { header: "Imagem", accessor: "image" },
@@ -46,12 +48,13 @@ const ListOfPlans: React.FC = () => {
     ];
 
     return (
-        <Table
-            columns={columns}
-            data={plans}
-            handleEdit={handleEdit}
-            handleDelete={handleDelete}
-        />
+      <>
+      <Table
+        columns={columns}
+        data={plans}
+        handleEdit={handleEdit}
+        handleDelete={handleDelete} />
+      </>
     )
 
 }

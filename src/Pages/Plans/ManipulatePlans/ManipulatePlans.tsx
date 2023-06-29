@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { createOrUpdatePlan, IPlan } from "../../../services/PlansServices";
+import { createOrUpdatePlan, IPlan, getAllPlans } from "../../../services/PlansServices";
 import { useNavigate } from "react-router-dom";
+import { AxiosError } from "axios";
 
 const ManipulatePlans: React.FC = () => {
   const navigate = useNavigate();
-  const { handleSubmit, register, reset } = useForm<IPlan>();
+  const [plans, setPlans] = useState<IPlan[]>();
+  const { handleSubmit, register, reset } = useForm<IPlan>({});
 
 
   const initialValues: IPlan = {
@@ -18,6 +20,26 @@ const ManipulatePlans: React.FC = () => {
     buttonTextColor: "",
     buttonIconColor: "",
   };
+
+  const fetchPlans = async () => {
+    try {
+        const plan = await getAllPlans();
+        setPlans(plan);
+    } catch (error) {
+        if (error instanceof AxiosError) {
+            if (error.response?.status !== 404) {
+                console.error("Erro ao buscar informações", error)
+            }
+        } else {
+            console.error("Ocorreu um erro desconhecido ao buscar informações", error)
+        }
+    }
+};
+
+useEffect(() => {
+    fetchPlans();
+}, [])
+
 
 
   const onSubmit = async (values: IPlan) => {

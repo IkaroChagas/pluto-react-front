@@ -8,12 +8,11 @@ import { useAuth } from '../../contexts/AuthContext';
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm<User>();
 
-  const {login} = useAuth();
+  const { login } = useAuth();
 
-
-  const onSubmit: SubmitHandler<User> = async (values: User) => {
+  const onSubmit: SubmitHandler<User> = async (values) => {
     try {
       const user = await loginService({ email: values.email, password: values.password });
       login(user);
@@ -22,7 +21,7 @@ const Login: React.FC = () => {
       alert("Erro ao realizar o login");
     }
   };
-
+  
 
   return (
     <C.FormContainer>
@@ -34,7 +33,7 @@ const Login: React.FC = () => {
         <C.Welcome>Seja bem vindo!</C.Welcome>
         <C.Message>Realize o login para prosseguir</C.Message>
 
-        <C.Form onSubmit={handleSubmit<User>(onSubmit)}>
+        <C.Form onSubmit={handleSubmit(onSubmit)}>
           <C.Input type="text" placeholder="E-mail" {...register('email', { required: true, maxLength: 60 })} />
           {errors.email && <C.ErrorMessage>E-mail é obrigatório</C.ErrorMessage>}
 

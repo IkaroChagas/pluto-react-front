@@ -5,6 +5,10 @@ export const DashboardContainer = styled.div`
     background-color: #F5F5F5;
 `;
 
+export const AddPlansContainer = styled.div`
+
+`;
+
 export const DashboardHeader = styled.h1`
   position: absolute;
   width: 18.06rem;

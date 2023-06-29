@@ -14,11 +14,11 @@ import ManipulatePlans from './Pages/Plans/ManipulatePlans/ManipulatePlans';
 const App = () => {
 
   return (
-
+    <>
     <Routes>
       <Route path="/" element={<Layout />} />
       <Route path="admin" element={<AdminLayout />}>
-        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="dashboard" element={<Dashboard plans={[]} />} />
         <Route path="/admin/adicionar-plano" element={<AddPlans />} />
         <Route path="/admin/listagem-de-planos/editar" element={<AddPlans />} />
         <Route path="/admin/listagem-de-planos" element={<ListPlans />} />
@@ -29,6 +29,7 @@ const App = () => {
       </Route>
       <Route path="/login" element={<Login />} />
     </Routes>
+    </>
 
   );
 };
