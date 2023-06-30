@@ -2,17 +2,18 @@ import api from './api'
 
 export interface IUnits {
     id?: number,
+    name: string
     unit: string,
     address: string,
     cityState: string,
-    responsible: string,
-    email: string,
+    responsibleName: string,
+    responsibleEmail: string,
     titleColor: string,
     bodyColor: string,
 }
 
-export const createUnit = async (units: IUnits): Promise<IUnits> => {
-    const response = await api.post<IUnits>('/units', units);
+export const createUnit = async (unit: IUnits): Promise<IUnits> => {
+    const response = await api.post<IUnits>('/units', unit);
     return response.data;
 }
 
@@ -26,8 +27,8 @@ export const getUnitById = async (id: number): Promise<IUnits> => {
     return response.data;
 }
 
-export const updateUnit = async (units: IUnits): Promise<IUnits> => {
-    const response = await api.put<IUnits>(`/units/${units.id}`, units);
+export const updateUnit = async (unit: IUnits): Promise<IUnits> => {
+    const response = await api.put<IUnits>(`/units/${unit.id}`, unit);
     return response.data;
 }
 
@@ -36,10 +37,10 @@ export const deleteUnit = async (id: number | undefined): Promise<IUnits> => {
     return response.data;
 }
 
-export const createOrUpdateUnit = async (units: IUnits): Promise<IUnits> => {
-    if (!units.id) {
-        return await createUnit(units);
+export const createOrUpdateUnit = async (unit: IUnits): Promise<IUnits> => {
+    if (!unit.id) {
+        return await createUnit(unit);
     } else {
-        return await updateUnit(units);
+        return await updateUnit(unit);
     }
 }

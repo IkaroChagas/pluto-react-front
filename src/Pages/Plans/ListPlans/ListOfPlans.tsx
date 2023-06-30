@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Table, { Column } from "../../../components/Table/Table";
 import { getAllPlans, deletePlan, IPlan } from "../../../services/PlansServices";
-import Dashboard from "../../Dashboard/Dashboard";
 
 
 const ListOfPlans: React.FC = () => {

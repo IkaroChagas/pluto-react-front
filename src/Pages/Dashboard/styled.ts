@@ -135,3 +135,8 @@ export const MajorFrame2 = styled.div`
   box-shadow: 0px 0.25rem 0.25rem rgba(49, 203, 138, 0.25);
   border-radius: 0.5rem;
 `;
+
+export const HeaderMajorFrame = styled.h2`
+  margin-left: 4rem;
+  color: #606060;
+`;

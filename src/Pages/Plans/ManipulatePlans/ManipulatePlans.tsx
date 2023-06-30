@@ -1,51 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { createOrUpdatePlan, IPlan, getAllPlans } from "../../../services/PlansServices";
+import { createOrUpdatePlan, IPlan } from "../../../services/PlansServices";
 import { useNavigate } from "react-router-dom";
-import { AxiosError } from "axios";
+import * as C from './styled'
 
 const ManipulatePlans: React.FC = () => {
   const navigate = useNavigate();
-  const [plans, setPlans] = useState<IPlan[]>();
   const { handleSubmit, register, reset } = useForm<IPlan>({});
-
-
-  const initialValues: IPlan = {
-    image: "",
-    title: "",
-    titleColor: "",
-    planValue: "",
-    buttonValue: "",
-    buttonColor: "",
-    buttonTextColor: "",
-    buttonIconColor: "",
-  };
-
-  const fetchPlans = async () => {
-    try {
-        const plan = await getAllPlans();
-        setPlans(plan);
-    } catch (error) {
-        if (error instanceof AxiosError) {
-            if (error.response?.status !== 404) {
-                console.error("Erro ao buscar informações", error)
-            }
-        } else {
-            console.error("Ocorreu um erro desconhecido ao buscar informações", error)
-        }
-    }
-};
-
-useEffect(() => {
-    fetchPlans();
-}, [])
-
 
 
   const onSubmit = async (values: IPlan) => {
     try {
       await createOrUpdatePlan(values);
-      reset(initialValues);
       navigate("/admin/listagem-de-planos/editar");
       alert("Formulário enviado com sucesso!");
     } catch (error) {
@@ -53,36 +19,44 @@ useEffect(() => {
       alert("Ocorreu um erro!");
     }
   }
-  
+
+  const handleDelete = () => {
+      reset();
+  };
+
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="image">Imagem</label>
-      <input type="text" id="image" {...register("image")} />
+    <C.AddPlansContainer>
+    <C.Frame>
+        <C.Title>Editar Plano</C.Title>
 
-      <label htmlFor="title">Título</label>
-      <input type="text" id="title" {...register("title")} />
+        <C.FormPlan onSubmit={handleSubmit(onSubmit)}>
 
-      <label htmlFor="titleColor">Cor do Título</label>
-      <input type="text" id="titleColor" {...register("titleColor")} />
+            <C.InputImage {...register("image", { required: true })} placeholder="Link da imagem" />
 
-      <label htmlFor="planValue">Valor do Plano</label>
-      <input type="text" id="planValue" {...register("planValue")} />
 
-      <label htmlFor="buttonValue">Texto do Botão</label>
-      <input type="text" id="buttonValue" {...register("buttonValue")} />
+            <C.InputTitle {...register("title", { required: true })} placeholder="Título" />
 
-      <label htmlFor="buttonColor">Cor do Botão</label>
-      <input type="text" id="buttonColor" {...register("buttonColor")} />
 
-      <label htmlFor="buttonTextColor">Cor do Texto do Botão</label>
-      <input type="text" id="buttonTextColor" {...register("buttonTextColor")} />
+            <C.InputTitleColor {...register("titleColor", { required: true })} placeholder="Cor do título" />
 
-      <label htmlFor="buttonIconColor">Cor do Ícone do Botão</label>
-      <input type="text" id="buttonIconColor" {...register("buttonIconColor")} />
 
-      <button type="submit">Salvar</button>
-    </form>
+            <C.InputPlanValue {...register("planValue", { required: true })} placeholder="Valor do plano" />
+
+
+            <C.InputButtonColor {...register("buttonColor", { required: true })} placeholder="Cor do botão" />
+
+            <C.InputTextColor {...register("buttonTextColor", { required: true })} placeholder="Cor do texto" />
+
+            <C.InputButtonIconColor {...register("buttonIconColor", { required: true })} placeholder="Cor do ícone do botão" />
+
+            <div>
+                <C.ButtonDelete type="button" onClick={handleDelete}>Limpar</C.ButtonDelete>
+                <C.ButtonSend type="submit">Salvar</C.ButtonSend>
+            </div>
+        </C.FormPlan>
+    </C.Frame>
+</C.AddPlansContainer>
   );
 };
 

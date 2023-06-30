@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Table, { Column } from "../../../components/Table/Table";
-import { getAllUnits, deleteUnit, Units } from "../../../services/UnitServices";
+import { getAllUnits, deleteUnit, Units } from "../../../services/UnitsServices";
 
 
 

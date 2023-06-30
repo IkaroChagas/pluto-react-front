@@ -1,22 +1,13 @@
 import React from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import * as C from './styled'
-import { createUnit } from "../../services/UnitServices";
+import { createUnit } from "../../services/UnitsServices";
 
-interface FormValues {
-    unit: string;
-    address: string;
-    cityState: string;
-    responsible: string;
-    email: string;
-    titleColor: string;
-    bodyColor: string;
-}
 
 const AddUnit: React.FC = () => {
-    const { register, handleSubmit, reset } = useForm<FormValues>();
+    const { register, handleSubmit, reset } = useForm();
 
-    const onSubmit: SubmitHandler<FormValues> = async (data) => {
+    const onSubmit = async (data: any) => {
         try {
             await createUnit(data);
             reset();
@@ -37,8 +28,9 @@ const AddUnit: React.FC = () => {
                 <C.Title>Adicionar Unidade</C.Title>
 
                 <C.FormUnit onSubmit={handleSubmit(onSubmit)}>
+
                     <C.InputUnit
-                        {...register("unit", { required: true })}
+                        {...register("name", { required: true })}
                         placeholder="Nome da unidade"
                     />
 
@@ -56,13 +48,13 @@ const AddUnit: React.FC = () => {
 
 
                     <C.InputResponsible
-                        {...register("responsible", { required: true })}
+                        {...register("responsibleName", { required: true })}
                         placeholder="Responsável"
                     />
 
 
                     <C.InputEmail
-                        {...register("email", { required: true })}
+                        {...register("responsibleEmail", { required: true })}
                         placeholder="E-mail do responsável"
                     />
 

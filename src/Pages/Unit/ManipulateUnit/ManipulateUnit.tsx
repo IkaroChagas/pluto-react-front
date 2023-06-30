@@ -1,26 +1,18 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { createOrUpdateUnit, IUnits } from '../../../services/UnitServices';
+import { createOrUpdateUnit, IUnits } from '../../../services/UnitsServices';
 import { useNavigate } from 'react-router-dom';
+import * as C from './styled'
 
 const ManipulateUnit: React.FC = () => {
   const navigate = useNavigate();
   const { handleSubmit, register, reset } = useForm<IUnits>();
 
-  const initialValues: IUnits = {
-    unit: '',
-    address: '',
-    cityState: '',
-    responsible: '',
-    email: '',
-    titleColor: '',
-    bodyColor: '',
-  };
 
   const onSubmit = async (values: IUnits) => {
     try {
       await createOrUpdateUnit(values);
-      reset(initialValues);
+      reset()
       navigate('/admin/listagem-das-unidades');
       alert('Formulário enviado com sucesso!');
     } catch (error) {
@@ -30,32 +22,65 @@ const ManipulateUnit: React.FC = () => {
   };
 
   
+  const handleDelete = () => {
+    reset();
+};
+
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="unit">Unidade:</label>
-      <input type="text" id="unit" {...register('unit')} />
+    <C.AddUnitContainer>
+            <C.Frame>
+                <C.Title>Editar Unidade</C.Title>
 
-      <label htmlFor="address">Endereço:</label>
-      <input type="text" id="address" {...register('address')} />
+                <C.FormUnit onSubmit={handleSubmit(onSubmit)}>
 
-      <label htmlFor="cityState">Cidade e Estado:</label>
-      <input type="text" id="cityState" {...register('cityState')} />
+                    <C.InputUnit
+                        {...register("name", { required: true })}
+                        placeholder="Nome da unidade"
+                    />
 
-      <label htmlFor="responsible">Responsável:</label>
-      <input type="text" id="responsible" {...register('responsible')} />
 
-      <label htmlFor="email">Email:</label>
-      <input type="email" id="email" {...register('email')} />
+                    <C.InputAddress
+                        {...register("address", { required: true })}
+                        placeholder="Endereço"
+                    />
 
-      <label htmlFor="titleColor">Cor do Título:</label>
-      <input type="text" id="titleColor" {...register('titleColor')} />
 
-      <label htmlFor="bodyColor">Cor do Corpo:</label>
-      <input type="text" id="bodyColor" {...register('bodyColor')} />
+                    <C.InputCityState
+                        {...register("cityState", { required: true })}
+                        placeholder="Cidade - Estado"
+                    />
 
-      <button type="submit">Salvar</button>
-    </form>
+
+                    <C.InputResponsible
+                        {...register("responsibleName", { required: true })}
+                        placeholder="Responsável"
+                    />
+
+
+                    <C.InputEmail
+                        {...register("responsibleEmail", { required: true })}
+                        placeholder="E-mail do responsável"
+                    />
+
+                    <C.InputTitleColor
+                        {...register("titleColor", { required: true })}
+                        placeholder="Cor dos títulos"
+                    />
+
+
+                    <C.InputBodyColor
+                        {...register("bodyColor", { required: true })}
+                        placeholder="Cor do corpo do texto"
+                    />
+
+                    <div>
+                        <C.ButtonDelete type="button" onClick={handleDelete}>Limpar</C.ButtonDelete>
+                        <C.ButtonSend type="submit">Salvar</C.ButtonSend>
+                    </div>
+                </C.FormUnit>
+            </C.Frame>
+        </C.AddUnitContainer>
   );
 };
 

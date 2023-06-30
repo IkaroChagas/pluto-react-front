@@ -18,14 +18,14 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />} />
       <Route path="admin" element={<AdminLayout />}>
-        <Route path="dashboard" element={<Dashboard plans={[]} />} />
+        <Route path="dashboard" element={<Dashboard plans={[]}  />} />
         <Route path="/admin/adicionar-plano" element={<AddPlans />} />
-        <Route path="/admin/listagem-de-planos/editar" element={<AddPlans />} />
         <Route path="/admin/listagem-de-planos" element={<ListPlans />} />
         <Route path="/admin/listagem-de-planos/editar" element={<ManipulatePlans />} />
+
         <Route path="/admin/adicionar-unidade" element={<AddUnit />} />
         <Route path="/admin/listagem-das-unidades" element={<ListOfUnits />} />
-        <Route path="/admin/admin/listagem-das-unidades" element={<ManipulateUnit />} />
+        <Route path="/admin/listagem-de-unidades/editar" element={<ManipulateUnit />} />
       </Route>
       <Route path="/login" element={<Login />} />
     </Routes>
