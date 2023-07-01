@@ -45,3 +45,7 @@ export const IconImage = styled.img`
   padding: 4px;
   margin-right: 8px;
 `;
+
+export const Span = styled.span`
+  font-size: 15px;
+`;

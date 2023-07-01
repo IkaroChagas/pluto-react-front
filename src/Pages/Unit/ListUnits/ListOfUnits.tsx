@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Table, { Column } from "../../../components/Table/Table";
-import { getAllUnits, deleteUnit, Units } from "../../../services/UnitsServices";
+import { getAllUnits, deleteUnit, IUnits } from "../../../services/UnitsServices";
 
 
 
 const ListOfUnits: React.FC = () => {
     const navigate = useNavigate();
-    const [unit, setUnits] = useState<Units[]>([]);
+    const [unit, setUnits] = useState<IUnits[]>([]);
 
     const fetchUnits = async () => {
         try {
@@ -22,11 +22,11 @@ const ListOfUnits: React.FC = () => {
         fetchUnits()
     }, []);
 
-    const handleEdit = (unit: Units) => {
+    const handleEdit = (unit: IUnits) => {
         navigate("/admin/listagem-de-unidades/editar", { state: unit })
     };
 
-    const handleDelete = async (unit: Units) => {
+    const handleDelete = async (unit: IUnits) => {
         try {
             await deleteUnit(unit.id);
             fetchUnits()
@@ -36,14 +36,14 @@ const ListOfUnits: React.FC = () => {
         }
     };
 
-    const columns: Column<Units>[] = [
-        { header: "Unidade", accessor: "unit" },
+    const columns: Column<any>[] = [
+        { header: "Unidade", accessor: "name" },
         { header: "Endereço", accessor: "address" },
-        { header: "Cidade e Estado", accessor: "cityState" },
-        { header: "Resposável", accessor: "responsible" },
-        { header: "E-mail", accessor: "email" },
-        { header: "Cor do título", accessor: "titleColor" },
-        { header: "Cor do corpo", accessor: "bodyColor" },
+        { header: "Cidade e Estado", accessor: "citystate" },
+        { header: "Resposável", accessor: "responsiblename" },
+        { header: "E-mail", accessor: "responsibleemail" },
+        { header: "Cor do título", accessor: "titlecolor" },
+        { header: "Cor do corpo", accessor: "bodycolor" },
     ];
 
     return (

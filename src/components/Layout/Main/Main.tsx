@@ -2,12 +2,9 @@ import React from "react";
 import * as C from "./styled";
 import Hands from '../../../assets/hands.png';
 import World from '../../../assets/world.png';
-import Ellipsered from '../../../assets/ellipsered.png';
-import Card1 from '../../../assets/Card1.png';
-import Card2 from '../../../assets/Card2.png';
 import Maps from "../../MapContainer/Maps";
-import Hearth from '../../../assets/hearth.png';
 import AddressCard from "../../CardAddress/CardAddress";
+import PlanCard from "../../PlanCard/PlanCard";
 
 
 const Main: React.FC = () => {
@@ -34,39 +31,7 @@ const Main: React.FC = () => {
                     </C.TextWorld>
                 </C.TextContainer>
             </section>
-            <C.Rectangle>
-                <C.EllipseredImage src={Ellipsered} />
-                <C.RectangleText>
-                    Quer ser um apoiador nessa causa?
-                </C.RectangleText>
-                <C.RectangleText2>
-                    Faça a sua doação e experimente o prazer de impactar vidas todos os dias
-                </C.RectangleText2>
-
-                <C.FirstCard>
-                    <C.FirstCardImage src={Card1} />
-                </C.FirstCard>
-
-                <C.CardButton>
-                    <C.CardText>
-                        Doar agora mesmo
-                        <C.CardIcon src={Hearth} />
-                    </C.CardText>
-                </C.CardButton>
-
-                <C.SecondCard>
-                    <C.SecondCardImage src={Card2} />
-                </C.SecondCard>
-
-                <C.CardButton2>
-                    <C.CardText2>
-                        Doar agora mesmo
-                        <C.CardIcon2 src={Hearth} />
-                    </C.CardText2>
-                </C.CardButton2>
-
-
-            </C.Rectangle>
+                <PlanCard />
 
             <C.TextContainer2>
                 <section>

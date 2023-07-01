@@ -37,7 +37,7 @@ export const Table = <T,>({ columns, data, handleEdit, handleDelete }: TableProp
                 {column.accessor === "image" ? (
                   <C.Image src={item[column.accessor] as string} alt='Imagem' />
                 ) : (
-                  item[column.accessor] as ReactNode
+                  <C.Span>{item[column.accessor] as string}</C.Span>
                 )}
               </C.td>
             ))}

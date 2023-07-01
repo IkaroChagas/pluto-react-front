@@ -1,93 +1,50 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyledCard, StyledTitle, StyledInfo, GridContainer } from './styled';
 import CardContent from '@mui/material/CardContent';
+import { IUnits, getAllUnits } from '../../services/UnitsServices';
 
 const AddressCard: React.FC = () => {
+  const [units, setUnits] = useState<any[]>([]);
+
+  const fetchUnits = async () => {
+      try {
+          const units = await getAllUnits();
+       setUnits(units)
+      } catch (error) {
+          alert("Erro ao buscar os unidades");
+      }
+  };
+
+  useEffect(() => {
+      fetchUnits()
+  }, []);
+
+
+
   return (
     <GridContainer>
-      <StyledCard>
-        <CardContent>
-          <StyledTitle variant="h4" gutterBottom>
-            Fortaleza-CE
-            <h6>unidade Ubirajara</h6>
-          </StyledTitle>
-          <StyledInfo variant="subtitle1" gutterBottom>
-            <h4>Endereço:</h4> 
-            Rua dos pracinhas, 324, Passaré<br />
-            61090130
-          </StyledInfo>
-          <StyledTitle variant="h6" gutterBottom>
-            Responsável pela unidade:
-          </StyledTitle>
-          <StyledInfo variant="body1" gutterBottom>
-            José de Alencar<br />
-            josedealen@gmail.com
-          </StyledInfo>
-        </CardContent>
-      </StyledCard>
-
-      <StyledCard>
-        <CardContent>
-          <StyledTitle variant="h4" gutterBottom>
-            Fortaleza-CE
-            <h6>unidade Ubirajara</h6>
-          </StyledTitle>
-          <StyledInfo variant="subtitle1" gutterBottom>
-            <h4>Endereço:</h4> 
-            Rua dos pracinhas, 324, Passaré<br />
-            61090130
-          </StyledInfo>
-          <StyledTitle variant="h6" gutterBottom>
-            Responsável pela unidade:
-          </StyledTitle>
-          <StyledInfo variant="body1" gutterBottom>
-            José de Alencar<br />
-            josedealen@gmail.com
-          </StyledInfo>
-        </CardContent>
-      </StyledCard>
-
-      <StyledCard>
-        <CardContent>
-          <StyledTitle variant="h4" gutterBottom>
-            Fortaleza-CE
-            <h6>unidade Ubirajara</h6>
-          </StyledTitle>
-          <StyledInfo variant="subtitle1" gutterBottom>
-            <h4>Endereço:</h4> 
-            Rua dos pracinhas, 324, Passaré<br />
-            61090130
-          </StyledInfo>
-          <StyledTitle variant="h6" gutterBottom>
-            Responsável pela unidade:
-          </StyledTitle>
-          <StyledInfo variant="body1" gutterBottom>
-            José de Alencar<br />
-            josedealen@gmail.com
-          </StyledInfo>
-        </CardContent>
-      </StyledCard>
-
-      <StyledCard>
-        <CardContent>
-          <StyledTitle variant="h4" gutterBottom>
-            Fortaleza-CE
-            <h6>unidade Ubirajara</h6>
-          </StyledTitle>
-          <StyledInfo variant="subtitle1" gutterBottom>
-            <h4>Endereço:</h4> 
-            Rua dos pracinhas, 324, Passaré<br />
-            61090130
-          </StyledInfo>
-          <StyledTitle variant="h6" gutterBottom>
-            Responsável pela unidade:
-          </StyledTitle>
-          <StyledInfo variant="body1" gutterBottom>
-            José de Alencar<br />
-            josedealen@gmail.com
-          </StyledInfo>
-        </CardContent>
-      </StyledCard>
+      {units.map(unit => (
+         <StyledCard>
+         <CardContent>
+           <StyledTitle variant="h4" gutterBottom>
+             {unit.citystate}
+             <h6>{unit.name}</h6>
+           </StyledTitle>
+           <StyledInfo variant="subtitle1" gutterBottom>
+             <h4>Endereço:</h4> 
+             {unit.address}
+           </StyledInfo>
+           <StyledTitle variant="h6" gutterBottom>
+             Responsável pela unidade:
+           </StyledTitle>
+           <StyledInfo variant="body1" gutterBottom>
+           {unit.responsiblename}
+             {unit.responsibleemail}
+           </StyledInfo>
+         </CardContent>
+       </StyledCard>
+ 
+      ))}
     </GridContainer>
   );
 }

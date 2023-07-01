@@ -36,14 +36,14 @@ const ListOfPlans: React.FC = () => {
     };
     
 
-    const columns: Column<IPlan>[] = [
+    const columns: Column<any>[] = [
         { header: "Imagem", accessor: "image" },
         { header: "Titulo", accessor: "title" },
-        { header: "Cor do titulo", accessor: "titleColor" },
-        { header: "Valor do plano", accessor: "planValue" },
-        { header: "Cor do botão", accessor: "buttonColor" },
-        { header: "Cor do texto do botão", accessor: "buttonTextColor" },
-        { header: "Cor do ícone botão", accessor: "buttonIconColor" },
+        { header: "Cor do titulo", accessor: "titlecolor" },
+        { header: "Valor do plano", accessor: "planvalue" },
+        { header: "Cor do botão", accessor: "buttoncolor" },
+        { header: "Cor do texto do botão", accessor: "buttontextcolor" },
+        { header: "Cor do ícone botão", accessor: "buttoniconcolor" },
     ];
 
     return (
