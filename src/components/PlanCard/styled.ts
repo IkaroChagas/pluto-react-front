@@ -12,17 +12,20 @@ export const Rectangle = styled.div`
 `;
 
 export const EllipseredImage = styled.img`
+  position: relative;
     width: 150px;
     height: 150px;
-    left: 460px;
-    top: 108rem;
+    left: 500px;
+    top: -4rem;
+    left: 20rem;
 `;
 
 export const RectangleText = styled.h1`
+    position: relative;
     width: 413px;
     height: 225px;
-    left: 320px;
-    top: 121rem;
+    left: 180px;
+    top: -3rem;
     font-family: 'Prata';
     font-style: normal;
     font-weight: 400;
@@ -31,11 +34,12 @@ export const RectangleText = styled.h1`
     color: #373734;
 `;
 
-export const RectangleText2 = styled.p`  
+export const RectangleText2 = styled.p`
+    position: relative;  
     width: 413px;
     height: 50px;
-    left: 320px;
-    top: 137rem;
+    left: 180px;
+    top: -7rem;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -62,45 +66,15 @@ export const ContainerCards = styled.div`
     display: flex;
 `;
 
-
 export const FirstCard = styled.div`
   position: relative;
   width: 20rem;
   height: 27.73rem;
   border-radius: 1.33rem;
   overflow: hidden;
-  margin-left: 20px;
+  margin-left: 110px;
   margin-top: auto;
   margin-bottom: auto;
-
-  ::before {
-    content: '';
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
-    opacity: 0.7;
-  }
-`;
-
-export const FirstCardImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
-
-
-export const SecondCard = styled.div`
-  position: absolute;
-  width: 20rem;
-  height: 27.73rem;
-  left: 81rem;
-  top: 118rem;
-  border-radius: 1.33rem;
-  overflow: hidden;
-
 
   ::before {
     content: '';
@@ -109,12 +83,12 @@ export const SecondCard = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
-    opacity: 0.7;
+    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0));
   }
 `;
 
-export const SecondCardImage = styled.img`
+export const FirstCardImage = styled.img`
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -137,6 +111,7 @@ export const CardButton = styled.div`
   position: absolute;
   width: 214px;
   height: 44px;
+  margin-left: 20px;
   bottom: 10px;
   background: #F8475E;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

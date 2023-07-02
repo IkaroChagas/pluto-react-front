@@ -14,6 +14,7 @@ interface DashboardProps {
 const Dashboard: React.FC<DashboardProps> = () => {
   const [plansCount, setPlansCount] = useState<number>(0);
   const [unitsCount, setUnitsCount] = useState<number>(0);
+  const [plansValue, setPlansValue] = useState<any>(0);
 
   const fetchUnits = async () => {
     try {
@@ -33,9 +34,20 @@ const Dashboard: React.FC<DashboardProps> = () => {
     }
   };
 
+  const fetchPlansValue = async () => {
+    try {
+        const plansV = await getAllPlans();
+     setPlansValue(plansV)
+    } catch (error) {
+        alert("Erro ao buscar os planos");
+    }
+};
+
+
   useEffect(() => {
     fetchPlans();
     fetchUnits();
+    fetchPlansValue()
   }, []);
 
   const donationAmount = 'R$550,00';
@@ -46,7 +58,7 @@ const Dashboard: React.FC<DashboardProps> = () => {
   ];
 
   const donationsData = [
-    { name: 'Plano 1', doações: 5000 },
+    { name: 'Plano 1', doações: plansValue },
     { name: 'Plano 2', doações2: 8000 },
   ];
 
@@ -96,7 +108,7 @@ const Dashboard: React.FC<DashboardProps> = () => {
 </C.MajorFrame>
 
 <C.MajorFrame2>
-  <C.HeaderMajorFrame>Arrecadações</C.HeaderMajorFrame>
+  <C.HeaderMajorFrame>Arrecadações por plano</C.HeaderMajorFrame>
   <BarChart style={{ marginTop: '5px' }} width={600} height={250} layout="vertical" data={donationsData}>
     <CartesianGrid strokeDasharray="3 3" />
     <XAxis type="number" />
