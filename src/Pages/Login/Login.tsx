@@ -14,7 +14,7 @@ const Login: React.FC = () => {
 
   const onSubmit: SubmitHandler<User> = async (values) => {
     try {
-      const data = await loginService({ email: values.email, password: values.password });
+     await loginService({ email: values.email, password: values.password });
       navigate('/admin/dashboard');
     } catch (error) {
       alert("Erro ao realizar o login");

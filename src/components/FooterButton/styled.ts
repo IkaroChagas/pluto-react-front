@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const BackToTopButton = styled.button`
+interface BackToTopButtonProps {
+  visible: boolean;
+}
+
+export const BackToTopButton = styled.button<BackToTopButtonProps>`
   position: fixed;
   top: 58.25rem;
   right: 12rem;
@@ -15,5 +19,6 @@ export const BackToTopButton = styled.button`
   font-size: 20px;
   cursor: pointer;
   opacity: ${(props) => (props.visible ? 1 : 0)};
+  display: ${({ visible }) => (visible ? 'block' : 'none')};
   transition: opacity 0.3s ease-in-out;
 `;

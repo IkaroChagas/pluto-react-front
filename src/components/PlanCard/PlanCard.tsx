@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Ellipsered from '../../assets/ellipsered.png'
 import Hearth from '../../assets/hearth.png';
-import { getAllPlans } from '../../services/PlansServices';
+import { getAllPlans, IPlan } from '../../services/PlansServices';
 import * as C from './styled';
 
 
 const PlanCard: React.FC = () => {
-    const [plans, setPlans] = useState<any[]>([]);
+    const [plans, setPlans] = useState<IPlan[]>([]);
 
     const fetchPlans = async () => {
         try {
@@ -40,7 +40,6 @@ const PlanCard: React.FC = () => {
                         <C.FirstCard>
                             <C.FirstCardImage src={plan.image} />
                             <C.CardButton>
-                            {/* {plan.buttoniconcolor} */}
                                 <C.CardText>
                                     Doar agora mesmo
                                     <C.CardIcon src={Hearth} />

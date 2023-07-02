@@ -3,12 +3,12 @@ export interface IPlan {
     id?: number,
     image: string,
     title: string,
-    titleColor: string,
-    planValue: string,
-    buttonValue: string,
-    buttonColor: string,
-    buttonTextColor: string,
-    buttonIconColor: string,
+    titlecolor: string,
+    planvalue: string,
+    buttonvalue: string,
+    buttoncolor: string,
+    buttontextcolor: string,
+    buttoniconcolor: string,
 }
 
 export const createPlan = async (plan: IPlan): Promise<IPlan> => {

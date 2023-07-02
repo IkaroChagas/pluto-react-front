@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import { IUnits, getAllUnits } from '../../services/UnitsServices';
 
 const AddressCard: React.FC = () => {
-  const [units, setUnits] = useState<any[]>([]);
+  const [units, setUnits] = useState<IUnits[]>([]);
 
   const fetchUnits = async () => {
       try {

@@ -5,11 +5,11 @@ export interface IUnits {
     name: string
     unit: string,
     address: string,
-    cityState: string,
-    responsibleName: string,
-    responsibleEmail: string,
-    titleColor: string,
-    bodyColor: string,
+    citystate: string,
+    responsiblename: string,
+    responsibleemail: string,
+    titlecolor: string,
+    bodycolor: string,
 }
 
 export const createUnit = async (unit: IUnits): Promise<IUnits> => {

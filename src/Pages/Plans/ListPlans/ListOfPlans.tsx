@@ -36,7 +36,7 @@ const ListOfPlans: React.FC = () => {
     };
     
 
-    const columns: Column<any>[] = [
+    const columns: Column<IPlan>[] = [
         { header: "Imagem", accessor: "image" },
         { header: "Titulo", accessor: "title" },
         { header: "Cor do titulo", accessor: "titlecolor" },

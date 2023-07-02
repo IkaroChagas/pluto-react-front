@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import * as C from './styles'
 import editIcon from '../../../src/assets/edit.png'
 import deleteIcon from '../../../src/assets/trash.png'
