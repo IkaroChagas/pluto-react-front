@@ -47,30 +47,30 @@ const ManipulateUnit: React.FC = () => {
 
 
                     <C.InputCityState
-                        {...register("cityState", { required: true })}
+                        {...register("citystate", { required: true })}
                         placeholder="Cidade - Estado"
                     />
 
 
                     <C.InputResponsible
-                        {...register("responsibleName", { required: true })}
+                        {...register("responsiblename", { required: true })}
                         placeholder="Responsável"
                     />
 
 
                     <C.InputEmail
-                        {...register("responsibleEmail", { required: true })}
+                        {...register("responsibleemail", { required: true })}
                         placeholder="E-mail do responsável"
                     />
 
                     <C.InputTitleColor
-                        {...register("titleColor", { required: true })}
+                        {...register("titlecolor", { required: true })}
                         placeholder="Cor dos títulos"
                     />
 
 
                     <C.InputBodyColor
-                        {...register("bodyColor", { required: true })}
+                        {...register("bodycolor", { required: true })}
                         placeholder="Cor do corpo do texto"
                     />
 
