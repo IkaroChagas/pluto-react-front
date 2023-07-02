@@ -10,12 +10,11 @@ const Login: React.FC = () => {
   const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm<User>();
 
-  const { login } = useAuth();
+  useAuth();
 
   const onSubmit: SubmitHandler<User> = async (values) => {
     try {
       const data = await loginService({ email: values.email, password: values.password });
-      // login(data.user);
       navigate('/admin/dashboard');
     } catch (error) {
       alert("Erro ao realizar o login");
