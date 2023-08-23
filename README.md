@@ -14,12 +14,16 @@ Edição de Unidades: As unidades existentes podem ser editadas a qualquer momen
 
 Exclusão de Unidades: Caso uma unidade não seja mais necessária, os usuários têm a opção de excluí-la do sistema.
 
-Acesso à Aplicação
+Acesso à Aplicação:
+<br/>
 O Pluto está hospedado na plataforma Vercel e pode ser acessado através do seguinte link: https://pluto-react-front-5wqp.vercel.app/
 
-Tecnologias Utilizadas
-Frontend: O frontend da aplicação foi desenvolvido utilizando React.js e Typescript com Styled Components, proporcionando uma experiência de usuário dinâmica.
-
+Tecnologias Utilizadas:
+<br/>
+<br/>
+Frontend: O frontend da aplicação foi desenvolvido utilizando ReactJS e Typescript com Styled Components, proporcionando uma experiência de usuário dinâmica.
+<br/>
+<br/>
 Backend: O backend foi construído utilizando MySQL para a criação das tabelas e NodeJS, permitindo a gestão eficiente das unidades de doação.
 
 ## Dados de login:
