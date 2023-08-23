@@ -22,6 +22,12 @@ Frontend: O frontend da aplicação foi desenvolvido utilizando React.js e Types
 
 Backend: O backend foi construído utilizando MySQL para a criação das tabelas e NodeJS, permitindo a gestão eficiente das unidades de doação.
 
+## Dados de login:
+
+login: teste@gmail.com
+<br/>
+senha: teste@123
+
 ## Instalação:
 
 Clone o projeto e dê npm install
