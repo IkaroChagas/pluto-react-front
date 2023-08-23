@@ -35,3 +35,6 @@ senha: teste@123
 ## Instalação:
 
 Clone o projeto e dê npm install
+
+
+![pluto](https://github.com/IkaroChagas/pluto-react-front/assets/100325726/b8d11057-0f37-4a03-bd85-4d528b175cc3)
