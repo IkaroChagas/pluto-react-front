@@ -16,7 +16,7 @@ Exclusão de Unidades: Caso uma unidade não seja mais necessária, os usuários
 
 Acesso à Aplicação:
 <br/>
-O Pluto está hospedado na plataforma Vercel e pode ser acessado através do seguinte link: https://pluto-react-front-5wqp.vercel.app/
+O Pluto está hospedado na plataforma Vercel e pode ser acessado através do seguinte link: [https://pluto-react-front-5wqp.vercel.app/](https://pluto-react.vercel.app/)
 
 Tecnologias Utilizadas:
 <br/>
