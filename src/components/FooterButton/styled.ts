@@ -21,4 +21,8 @@ export const BackToTopButton = styled.button<BackToTopButtonProps>`
   opacity: ${(props) => (props.visible ? 1 : 0)};
   display: ${({ visible }) => (visible ? 'block' : 'none')};
   transition: opacity 0.3s ease-in-out;
+
+  @media (max-width: 428px) {
+    display: none;
+  }
 `;

@@ -3,10 +3,15 @@ import { Link } from "react-router-dom";
 
 export const Sidebar = styled.div`
   width: 295px;
-  height: 1080px;
+  height: 100vh;
   background: #00C172;
   padding: 3.0rem;
   box-sizing: border-box;
+
+  @media (max-width: 428px) {
+    width: 295px; 
+    flex-direction: column; 
+  }
 `;
 
 export const Logo = styled.h1`
@@ -79,4 +84,3 @@ export const NavigationLink = styled(Link)`
     border-radius: 1px;
   }
 `;
-

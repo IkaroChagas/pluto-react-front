@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const DashboardContainer = styled.div`
     display: flex;
     background-color: #F5F5F5;
+    height: 100%;
 `;
 
 export const AddPlansContainer = styled.div`
-
 `;
 
 export const DashboardHeader = styled.h1`

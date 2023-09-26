@@ -32,6 +32,10 @@ export const Nav = styled.ul`
   text-transform: uppercase;
   color: #373734;
   white-space: nowrap;  
+
+  @media (max-width: 428px) {
+    left: 45rem;
+  }
 `;
 
 export const NavItem = styled.li`
